@@ -1,0 +1,102 @@
+body {
+    background-color: #477eca;
+}
+
+.dashboard {
+    padding: 40px;
+}
+
+.dashboard h1 {
+    color: #112849;
+}
+.dashboard p {
+    color: #112849;
+
+    font-size: 20px;
+}
+
+
+
+.indicadores {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+
+.indicador {
+    background-color: #245eaf;
+
+    padding: 20px;
+
+    width: 25%;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px #00000020;
+}
+
+
+.indicador p {
+    color: white;
+
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+.indicador h2 {
+    margin-bottom: 0;
+
+    color: #d9a817;
+}
+
+
+
+.tabela {
+    background-color: #ffffff;
+
+    color: #112849;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px #00000020;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+
+th {
+    background-color: #245eaf;
+
+    color: white;
+
+    text-align: left;
+
+    padding: 12px;
+
+    font-size: 18px;
+}
+
+
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid #477eca;
+
+    font-size: 16px;
+}

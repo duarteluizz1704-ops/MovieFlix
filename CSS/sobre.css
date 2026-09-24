@@ -1,0 +1,68 @@
+body {
+    background-color: #477eca;
+}
+
+.sobre {
+    padding: 50px;
+
+    width: 80%;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.sobre section {
+    width: 100%;
+
+    background-color: #245eaf;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px #00000020;
+}
+
+.sobre h1 {
+    color: #80b5ff;
+}
+
+
+.sobre p {
+    color: #80b5ff;
+
+    line-height: 1.6;
+
+    font-size: 20px;
+}
+
+
+.sobre li {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    color: #80b5ff;
+}
+
+.missao {
+    background-color: #80b5ff;
+
+    font-size: 20px;
+}
+
+.missao h2 {
+    color: #80b5ff;
+}
+
+.porque h2 {
+    font-size: 29px;
+
+    color: #80b5ff;
+}
