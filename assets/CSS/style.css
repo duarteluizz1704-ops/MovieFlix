@@ -1,0 +1,596 @@
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #477eca;
+    color: #33251f;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #112849;
+    color: white;
+
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 13px;
+    color: #d8b65c;
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #8cb9f8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d8b65c;
+}
+
+
+/* =========================
+   SUBMENU DO CATÁLOGO
+========================= */
+
+.menu-catalogo {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: #0c3268;
+    width: 150px;
+
+    z-index: 10;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    margin: 0;
+}
+
+.menu-catalogo:hover .submenu,
+.menu-catalogo:focus-within .submenu {
+    display: block;
+}
+
+
+/* =========================
+   BOTÕES GERAIS
+========================= */
+
+button {
+    background-color: #d8aa24;
+    color: #33251f;
+
+    border: none;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #bd9119;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #477eca;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #112849;
+    color: #8cb9f8;
+
+    padding: 30px 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+footer h3 {
+    color: #d8b65c;
+}
+
+footer p {
+    color: #8cb9f8;
+}
+
+footer a {
+    display: block;
+
+    color: #8cb9f8;
+    text-decoration: none;
+
+    margin-bottom: 8px;
+}
+
+footer a:hover {
+    color: #d8b65c;
+}
+
+.copyright {
+    width: 100%;
+
+    text-align: center;
+
+    border-top: 1px solid #8cb9f8;
+
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   PÁGINA DE LOGIN
+========================= */
+
+.login-area {
+    flex: 1;
+    min-height: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.login {
+    background-color: white;
+
+    width: 100%;
+    max-width: 400px;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px #00000020;
+}
+
+.login h1 {
+    margin-top: 0;
+    color: #112849;
+}
+
+.login p {
+    color: #75685d;
+}
+
+.login form {
+    margin-top: 25px;
+}
+
+.login label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+.login input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.login form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.login a {
+    color: #a87900;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MENSAGEM DE ERRO DO LOGIN
+========================= */
+
+.mensagem-erro {
+    color: #c62828 !important;
+
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TELAS MENORES
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 75px;
+    }
+
+    footer {
+        padding: 25px 20px;
+        justify-content: flex-start;
+    }
+
+    .login-area {
+        min-height: auto;
+        padding: 35px 15px;
+    }
+
+    .login {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .login {
+        padding: 20px;
+    }
+
+}
+
+
+/* PÁGINA DE CADASTRO */
+
+.cadastro-area {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.cadastro {
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #00000020;
+    box-sizing: border-box;
+}
+
+.cadastro h1 {
+    margin-top: 0;
+    color: #112849;
+}
+
+.cadastro p {
+    color: #75685d;
+}
+
+.cadastro form {
+    margin-top: 25px;
+}
+
+.cadastro label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastro input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.cadastro form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #112849;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cadastro form button:hover {
+    background-color: #1e448f;
+}
+
+.cadastro a {
+    color: #a87900;
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+.mensagem-erro {
+    color: #b00020;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mensagem-sucesso {
+    background-color: #e8f5e9;
+    border: 1px solid #81c784;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.cadastro .mensagem-sucesso p {
+    color: #2e7d32;
+}
+
+@media (max-width: 480px) {
+    .cadastro-area {
+        padding: 20px 15px;
+    }
+
+    .cadastro {
+        padding: 25px 20px;
+    }
+}
+
+
+/* =========================
+   PÁGINA DE INDEX
+========================= */
+
+
+/* BANNER PRINCIPAL */
+.banner {
+    background-color: #245eaf;
+    padding: 60px 40px;
+}
+
+.banner h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #112849;
+}
+
+.banner p {
+    color: #112849;
+    font-size: 20px;
+}
+
+/* BOTÃO DO BANNER */
+.botao-banner {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #112849;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-banner:hover {
+    background-color: #1d3557;
+}
+
+/* SEÇÃO DO CATÁLOGO */
+.catalogo {
+    padding: 25px 50px;
+    text-align: center;
+    background-color: #477eca;
+}
+
+.catalogo h2 {
+    margin-bottom: 25px;
+    font-size: 25px;
+    color: #1d3557;
+}
+
+/* ORGANIZAÇÃO DOS FILMES */
+.filmes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* CARD DE CADA FILME */
+.filme {
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    background-color: #245eaf;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* IMAGENS DOS FILMES */
+.filme img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    padding: 7px;
+    box-sizing: border-box;
+    background-color: #1d3557;
+    border: 5px solid #d9a817;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* TÍTULO DOS FILMES */
+.filme h3 {
+    margin: 10px 0 5px;
+    color: #80b5ff;
+}
+
+/* PREÇO DOS FILMES */
+.filme p {
+    margin: 5px 0 15px;
+    color: #80b5ff;
+    font-weight: bold;
+}
+
+/* BOTÃO ALUGAR */
+.botao-filme {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #112849;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.botao-filme:hover {
+    background-color: #1d3557;
+}
+
+/* AJUSTE PARA CELULARES */
+@media (max-width: 600px) {
+    .banner {
+        padding: 40px 20px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 17px;
+    }
+
+    .catalogo {
+        padding: 25px 15px;
+    }
+
+    .filmes {
+        gap: 20px;
+    }
+
+    .filme {
+        width: 100%;
+        max-width: 280px;
+    }
+}

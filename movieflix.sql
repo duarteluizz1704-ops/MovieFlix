@@ -1,5 +1,9 @@
--- BANCO DE DADOS UTILIZADO:
+-- BANCO DE DADOS:
 -- movieflix
+
+CREATE DATABASE IF NOT EXISTS movieflix
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_bin;
 
 -- TABELA: USUARIO
 
@@ -126,3 +130,54 @@ CREATE TABLE contato (
     mensagem TEXT NOT NULL,
     data_envio DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+-- INSERIR FILMES
+
+INSERT INTO filmes
+    (titulo, sinopse, genero, ano_lancamento, duracao_minutos,
+     classificacao_indicativa, preco_aluguel, disponivel, capa)
+VALUES
+    (
+        'Jurassic Park',
+        'Um parque temático com dinossauros recriados por engenharia genética acaba se tornando um lugar perigoso.',
+        'Aventura',
+        1993,
+        127,
+        '12 anos',
+        9.90,
+        TRUE,
+        'IMG/filme1.jpg'
+    ),
+    (
+        'Homem-Aranha: Um Novo Dia',
+        'Peter Parker enfrenta novos desafios enquanto tenta equilibrar sua vida pessoal e suas responsabilidades como herói.',
+        'Ação',
+        2026,
+        145,
+        '12 anos',
+        12.90,
+        TRUE,
+        'IMG/filme2.jpg'
+    ),
+    (
+        'Superman',
+        'O herói Superman enfrenta desafios enquanto busca inspirar a humanidade com esperança e justiça.',
+        'Ação',
+        2025,
+        129,
+        '12 anos',
+        8.90,
+        TRUE,
+        'IMG/filme3.jpg'
+    ),
+    (
+        'Interestelar',
+        'Uma equipe de astronautas viaja através de um buraco de minhoca em busca de um novo lar para a humanidade.',
+        'Ficção científica',
+        2014,
+        169,
+        '10 anos',
+        10.90,
+        TRUE,
+        'IMG/filme4.jpg'
+    );
