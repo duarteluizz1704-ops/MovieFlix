@@ -38,7 +38,7 @@
 
                 <!-- Filme 1 -->
                 <div class="filme">
-                    <img src="IMG/filme1.jpg" alt="Pôster de Jurassic Park">
+                    <img src="assets/IMG/jurassicpark1993.jpg" alt="Pôster de Jurassic Park">
 
                     <h3>Jurassic Park</h3>
 
@@ -51,7 +51,7 @@
 
                 <!-- Filme 2 -->
                 <div class="filme">
-                    <img src="IMG/filme2.jpg" alt="Pôster de Homem-Aranha">
+                    <img src="assets/IMG/homemAranha2026.jpg" alt="Pôster de Homem-Aranha">
 
                     <h3>Homem-Aranha</h3>
 
@@ -64,7 +64,7 @@
 
                 <!-- Filme 3 -->
                 <div class="filme">
-                    <img src="IMG/filme3.jpg" alt="Pôster de Superman">
+                    <img src="assets/IMG/superman2025.jpg" alt="Pôster de Superman">
 
                     <h3>Superman</h3>
 
@@ -77,7 +77,7 @@
 
                 <!-- Filme 4 -->
                 <div class="filme">
-                    <img src="IMG/filme4.jpg" alt="Pôster de Interestelar">
+                    <img src="assets/IMG/interestellar2014.jpg" alt="Pôster de Interestelar">
 
                     <h3>Interestelar</h3>
 

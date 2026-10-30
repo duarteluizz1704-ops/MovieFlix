@@ -146,7 +146,7 @@ VALUES
         '12 anos',
         9.90,
         TRUE,
-        'IMG/filme1.jpg'
+        'IMG/jurassicPark1993.jpg'
     ),
     (
         'Homem-Aranha: Um Novo Dia',
@@ -157,7 +157,7 @@ VALUES
         '12 anos',
         12.90,
         TRUE,
-        'IMG/filme2.jpg'
+        'IMG/homemAranha2026.jpg'
     ),
     (
         'Superman',
@@ -168,7 +168,7 @@ VALUES
         '12 anos',
         8.90,
         TRUE,
-        'IMG/filme3.jpg'
+        'IMG/superman2025.jpg'
     ),
     (
         'Interestelar',
@@ -179,5 +179,5 @@ VALUES
         '10 anos',
         10.90,
         TRUE,
-        'IMG/filme4.jpg'
+        'IMG/interestellar2014.jpg'
     );

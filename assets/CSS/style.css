@@ -594,3 +594,236 @@ footer a:hover {
         max-width: 280px;
     }
 }
+
+/* =========================
+   PÁGINA DE PRODUTO
+========================= */
+
+/* FUNDO DA PÁGINA */
+body {
+    background-color: #477eca;
+}
+
+/* TÍTULO DO CATÁLOGO */
+.titulo-catalogo {
+    text-align: center;
+    padding: 25px;
+    background-color: #245eaf;
+}
+
+.titulo-catalogo h2 {
+    margin: 0;
+    color: #112849;
+    font-size: 25px;
+}
+
+.titulo-catalogo p {
+    color: #112849;
+    font-size: 20px;
+}
+
+/* CATEGORIA */
+.categoria {
+    width: 95%;
+    margin: 0 auto 30px;
+}
+
+.categoria > h2 {
+    text-align: center;
+    margin: 25px 0;
+    color: #112849;
+    font-size: 25px;
+}
+
+/* ORGANIZAÇÃO DOS PRODUTOS */
+.produtos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* CARD DO FILME */
+.produto {
+    width: 280px;
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #112849;
+    border: 1px solid #eadfc8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #1d3557;
+    box-sizing: border-box;
+}
+
+/* ÁREA DA CAPA */
+.imagem-produto {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d3557;
+    border: 6px solid #d9a817;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px #1d3557;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* IMAGEM DO FILME */
+.imagem-produto img {
+    width: 120px;
+    height: 180px;
+    object-fit: contain;
+    border: 2px solid #f6e4a6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* INFORMAÇÕES */
+.informacoes h3 {
+    font-size: 17px;
+    margin: 12px 0 8px;
+    color: #80b5ff;
+}
+
+.informacoes p {
+    margin: 8px 0;
+    color: #80b5ff;
+    font-size: 14px;
+}
+
+/* GÊNERO E ANO */
+.informacoes .genero {
+    font-size: 14px;
+}
+
+/* SINOPSE */
+.informacoes .sinopse {
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* PREÇO */
+.informacoes .preco {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #f6d66b;
+}
+
+/* BOTÃO ALUGAR */
+.botao-alugar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #d9a817;
+    color: #1d3557;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.botao-alugar:hover {
+    background-color: #b98b0d;
+    color: white;
+}
+
+/* CAPA NÃO CADASTRADA */
+.sem-capa {
+    color: white;
+    font-size: 14px;
+}
+
+/* NENHUM FILME DISPONÍVEL */
+.sem-filmes {
+    width: 100%;
+    text-align: center;
+    color: #112849;
+    padding: 30px;
+}
+
+/* AVALIAÇÕES */
+.avaliacoes {
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid #1d3557;
+    padding: 25px 15px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.avaliacoes h2 {
+    margin-bottom: 5px;
+    color: #112849;
+    font-size: 25px;
+}
+
+.avaliacoes > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #112849;
+}
+
+/* LISTA DE AVALIAÇÕES */
+.lista-avaliacoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* CARD DE AVALIAÇÃO */
+.avaliacao {
+    width: 220px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #dce8f8;
+    color: #112849;
+    box-sizing: border-box;
+}
+
+.avaliacao h3 {
+    font-size: 17px;
+    margin: 5px 0;
+    color: #112849;
+}
+
+.avaliacao p {
+    margin: 8px 0;
+    color: #112849;
+}
+
+.avaliacao .estrelas {
+    font-size: 20px;
+    color: #a87900;
+}
+
+/* TELAS MENORES */
+@media (max-width: 600px) {
+    .categoria {
+        width: 92%;
+    }
+
+    .produto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .titulo-catalogo {
+        padding: 20px 15px;
+    }
+
+    .titulo-catalogo p {
+        font-size: 17px;
+    }
+
+    .avaliacao {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
