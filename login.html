@@ -69,27 +69,29 @@
 
             <p>Entre na sua conta.</p>
 
+            <form id="formLogin">
 
-            <form>
-
-                <label>Email</label>
-
+                <label for="email">Email</label>
                 <input
                     type="email"
+                    id="email"
                     placeholder="Digite seu email"
                 >
 
-
-                <label>Senha</label>
-
+                <label for="senha">Senha</label>
                 <input
                     type="password"
+                    id="senha"
                     placeholder="Digite sua senha"
                 >
-              
-                <a href="dashbord.html">
-                    <button type="button">Entrar</button>
-                </a>
+
+                <button type="button" id="mostrarSenha">
+                    Mostrar senha
+                </button>
+
+                <button type="submit">
+                    Entrar
+                </button>
 
             </form>
 
