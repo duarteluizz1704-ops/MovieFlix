@@ -2,16 +2,6 @@
 
     <main>
 
-        <section class="titulo-catalogo">
-
-            <h2>Catálogo</h2>
-
-            <p>
-                Encontre filmes para assistir.
-            </p>
-
-        </section>
-
 
         <section id="filmes" class="categoria">
 

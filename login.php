@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include 'headerlogin.php';?>
 
     <main class="login-area">
 
@@ -38,7 +38,7 @@
 
             <p>
                 Ainda não possui uma conta?
-                <a href="cadastro.html">Cadastre-se</a>
+                <a href="cadastro.php">Cadastre-se</a>
             </p>
 
         </div>

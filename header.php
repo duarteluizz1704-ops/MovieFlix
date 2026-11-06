@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="assets/CSS/style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -20,13 +22,13 @@
 
         <div class="logo">
 
-            <img src="assets/IMG/logo.jpg" alt="">
+            <img src="assets/IMG/logo1.png" alt="">
 
-            <div>
+            <div class="movieflix">
 
-                <h2>MovieFlix</h2>
+                <h2><span class="movie">Movie</span><span class="flix">Flix</span></h2>
 
-                <p>Aluguel de filmes</p>
+                <p>Alugue.Assista.Avalie</p>
 
             </div>
 
@@ -35,7 +37,7 @@
 
         <nav>
 
-            <a href="inicio.php">Início</a>
+            <a href="index.php">Início</a>
 
            <div class="menu-catalogo">
 
@@ -52,7 +54,7 @@
 
             <a href="contato.php">Contato</a>
 
-            <a href="login.php">Login</a>
+            <a href="login.php" class="login-nav">Login</a>
 
         </nav>
 

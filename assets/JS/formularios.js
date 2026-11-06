@@ -35,7 +35,7 @@ if (formLogin) {
 
         alert("Login validado!");
 
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard.php";
 
     });
 

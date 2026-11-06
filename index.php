@@ -4,7 +4,7 @@
 
         <section class="banner">
 
-            <h1>Alugue seus filmes favoritos</h1>
+            <h1>Bem vindo ao</h1>
 
             <p>
                 Encontre filmes de ação, aventura,
