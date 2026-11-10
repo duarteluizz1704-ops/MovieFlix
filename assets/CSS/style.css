@@ -211,11 +211,13 @@ footer {
     padding: 20px 50px 12px;
 
     display: grid;
-    grid-template-columns: 1.3fr 0.8fr 1fr 1fr;
+    grid-template-columns: 250px 180px 260px 220px;
+
+    justify-content: center;
 
     align-items: start;
 
-    gap: 20px;
+    gap: 30px;
 }
 
 .footer-navegacao,
@@ -235,12 +237,15 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px;
+
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
 .logofooter img {
     width: 70px;
     height: auto;
-
 }
 
 .movieflixfooter h2 {
@@ -260,7 +265,7 @@ footer h3 {
 
     color: #d8aa24;
 
-    font-size: 17px;
+    font-size: 19px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -277,7 +282,7 @@ footer h3 {
     color: #8cb9f8;
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 7px;
     transition: 0.3s;
 }
@@ -294,7 +299,7 @@ footer h3 {
 
 .footer-contato p {
     margin: 8px 0;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .footer-versao {
@@ -310,7 +315,7 @@ footer h3 {
 
 .footer-versao p {
     margin: 8px 0;
-    font-size: 13px;
+    font-size: 15px;
     color: #8cb9f8;
 }
 
@@ -329,7 +334,6 @@ footer h3 {
     font-size: 13px;
 }
 
-
 /* =========================
    PÁGINA DE LOGIN
 ========================= */
@@ -345,6 +349,8 @@ footer h3 {
     padding: 40px 20px;
 }
 
+/* CARD PRINCIPAL */
+
 .login {
     background-color: white;
 
@@ -353,258 +359,345 @@ footer h3 {
 
     padding: 30px;
 
-    border-radius: 8px;
+    border: 2px solid #d8aa24;
+    border-radius: 12px;
 
     box-shadow: 0 3px 10px #00000020;
 }
 
+/* TÍTULO */
+
 .login h1 {
-    margin-top: 0;
+    margin: 0;
+    text-align: center;
+
     color: #112849;
+    font-size: 32px;
 }
 
-.login p {
-    color: #75685d;
+/* LEGENDA */
+
+.legenda-login {
+    text-align: center;
+    color: #112849;
+
+    margin: 12px 0 25px;
 }
+
+/* FORMULÁRIO */
 
 .login form {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .login label {
     display: block;
 
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
     font-weight: bold;
+    color: #112849;
 }
+
+/* CAMPO DE EMAIL */
 
 .login input {
     width: 100%;
+    box-sizing: border-box;
 
     padding: 12px;
 
     border: 1px solid #cccccc;
-    border-radius: 5px;
+    border-radius: 6px;
 
-    font-size: 15px;
+    background-color: #e8f0fd;
+
+    font-size: 14px;
 }
 
-.login form button {
-    margin-top: 20px;
+/* EFEITO AO CLICAR NOS CAMPOS */
+
+.login input:focus {
+    outline: none;
+    border: 2px solid #d8aa24;
+}
+
+/* =========================
+   CAMPO DE SENHA
+========================= */
+
+.campo-senha {
+    position: relative;
     width: 100%;
 }
 
-.login a {
-    color: #a87900;
-    text-decoration: none;
+.campo-senha input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 45px 12px 12px;
 }
-
-.login a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   MENSAGEM DE ERRO DO LOGIN
-========================= */
-
-.mensagem-erro {
-    color: #c62828 !important;
-
-    background-color: #ffebee;
-    border: 1px solid #ef9a9a;
-
-    padding: 10px;
-    border-radius: 5px;
-
-    margin-bottom: 15px;
-}
-
-/* BOTÃO MOSTRAR */
 
 #mostrarSenha {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+#mostrarSenha svg {
+    width: 22px;
+    height: 22px;
+}
+
+#mostrarSenha img {
     display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
 
-    width: auto;
-    margin: 10px 0 0 auto;
-    padding: 8px 15px;
+/* =========================
+   BOTÃO ENTRAR
+========================= */
 
-    background-color: #112849;
-    color: white;
+.botao-entrar {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 12px;
+
+    background-color: #d8aa24;
+    color: #112849;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
 
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-#mostrarSenha:hover {
-    background-color: #245eaf;
+.botao-entrar:hover {
+    background-color: #bd9216;
 }
 
 /* =========================
-   TELAS MENORES
+   CADASTRO
 ========================= */
 
-@media (max-width: 768px) {
+.cadastro-login {
+    text-align: center;
 
-    header {
-        flex-direction: column;
-        padding: 20px;
-    }
+    color: #112849;
+    font-size: 14px;
 
-    nav {
-        justify-content: center;
-        gap: 15px;
-    }
+    margin-top: 20px;
 
-    nav a {
-        font-size: 14px;
-    }
+    white-space: nowrap;
+}
 
-    .logo img {
-        width: 75px;
-        height: 75px;
-    }
+.cadastro-login a {
+    color: #a87900;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-    footer {
+.cadastro-login a:hover {
+    text-decoration: underline;
+}
+
+/* TELAS PEQUENAS */
+
+@media (max-width: 450px) {
+    .login {
         padding: 25px 20px;
-        justify-content: flex-start;
     }
 
-    .login-area {
-        min-height: auto;
-        padding: 35px 15px;
-    }
-
-    .login {
-        padding: 25px;
+    .cadastro-login {
+        white-space: normal;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 400px) {
-
-    nav {
-        gap: 12px;
-    }
-
-    .login {
-        padding: 20px;
-    }
-
-}
 
 
-/* PÁGINA DE CADASTRO */
+/* =========================
+   PÁGINA DE CADASTRO
+========================= */
 
 .cadastro-area {
-    min-height: 550px;
+    min-height: 600px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+
+    padding: 40px 20px;
+
     box-sizing: border-box;
 }
 
 .cadastro {
     background-color: white;
-    width: 400px;
-    max-width: 100%;
+
+    width: 100%;
+    max-width: 600px;
+
     padding: 30px;
-    border-radius: 8px;
+
+    border: 2px solid #d8aa24;
+    border-radius: 12px;
+
     box-shadow: 0 3px 10px #00000020;
+
     box-sizing: border-box;
 }
 
+/* TÍTULO */
+
 .cadastro h1 {
-    margin-top: 0;
+    text-align: center;
+
+    margin: 0 0 8px;
+
+    font-size: 30px;
     color: #112849;
 }
 
-.cadastro p {
+.legenda-cadastro {
+    text-align: center;
+
     color: #75685d;
+
+    margin-bottom: 25px;
 }
+
+/* FORMULÁRIO */
 
 .cadastro form {
-    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
 }
 
-.cadastro label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.campo label {
+    margin-bottom: 6px;
+
     font-weight: bold;
+    color: #112849;
+
+    font-size: 14px;
 }
 
-.cadastro input {
-    display: block;
+.campo input {
     width: 100%;
-    padding: 12px;
+
+    padding: 11px;
+
     border: 1px solid #cccccc;
     border-radius: 5px;
+
+    background-color: #e8f0fe;
+
+    font-size: 14px;
+
     box-sizing: border-box;
-    font-size: 15px;
+
+    transition: 0.2s;
 }
 
-.cadastro form button {
-    margin-top: 20px;
+/* BORDA AO CLICAR */
+
+.campo input:focus {
+    outline: none;
+
+    border: 1px solid #d8aa24;
+
+    box-shadow: 0 0 0 2px #d8aa2440;
+}
+
+/* CAMPOS LADO A LADO */
+
+.campos-duplos {
+    display: flex;
+
+    gap: 20px;
+}
+
+/* BOTÃO */
+
+.botao-cadastro {
     width: 100%;
-    padding: 12px;
-    background-color: #112849;
-    color: white;
+
+    margin-top: 12px;
+
+    padding: 13px;
+
+    background-color: #d8aa24;
+    color: #112849;
+
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+
+    font-size: 15px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
-.cadastro form button:hover {
-    background-color: #1e448f;
+.botao-cadastro:hover {
+    background-color: #bd9217;
 }
 
-.cadastro a {
-    color: #a87900;
-    text-decoration: none;
-}
+/* RESPONSIVIDADE */
 
-.cadastro a:hover {
-    text-decoration: underline;
-}
+@media (max-width: 550px) {
 
-.mensagem-erro {
-    color: #b00020;
-    background-color: #ffebee;
-    border: 1px solid #ef9a9a;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.mensagem-sucesso {
-    background-color: #e8f5e9;
-    border: 1px solid #81c784;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.cadastro .mensagem-sucesso p {
-    color: #2e7d32;
-}
-
-@media (max-width: 480px) {
     .cadastro-area {
-        padding: 20px 15px;
+        padding: 25px 15px;
     }
 
     .cadastro {
         padding: 25px 20px;
     }
-}
 
+    .campos-duplos {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
 
 /* =========================
    PÁGINA DE INDEX
@@ -1163,208 +1256,255 @@ td {
    PÁGINA DE CONTATO
 ========================= */
 
-/* Área principal */
-
-.area-contato {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 90px;
-
-    max-width: 1300px;
-    margin: 50px auto;
-    padding: 0 30px;
-}
-
-
-/* =========================
-   CARD DE INFORMAÇÕES
-========================= */
-
-.info-contato {
-    background-color: #2860a9;
-    color: #80b5ff;
-
-    padding: 30px;
-    border-radius: 8px;
-
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr 1fr;
-
-    align-items: start;
-    gap: 15px;
-
-    min-height: 250px;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-.info-contato h1 {
-    font-size: 28px;
-    margin: 15px 0;
-}
-
-.info-contato p {
-    font-size: 18px;
-    line-height: 1.6;
-
-    margin: 15px 0;
-}
-
-.info-contato ul {
-    padding-left: 20px;
-    margin: 15px 0;
-}
-
-.info-contato li {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-
-/* =========================
-   PÁGINA DE CONTATO
-========================= */
-
 .area-contato {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
+    align-items: center;
 
     padding: 45px 30px;
+
     background-color: #477eca;
 }
 
-/* BLOCO DE INFORMAÇÕES */
+
+/* CARD PRINCIPAL */
+
+.contato-card {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    max-width: 1150px;
+
+    border: 2px solid #d8aa24;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px #00000025;
+}
+
+
+/* =========================
+   LADO ESQUERDO
+========================= */
 
 .info-contato {
-    background-color: #2860a8;
-    color: #8cb9f8;
+    background-color: #112849;
+    color: #dce8f8;
 
-    width: 450px;
-    min-height: 350px;
-    padding: 35px;
+    padding: 40px;
 
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-
-    /* Conteúdo na vertical */
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
-    margin-top: 0;
+    justify-content: space-between;
 }
 
 .info-contato h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    color: white;
+
+    font-size: 30px;
+    margin: 0 0 20px;
 }
 
 .info-contato p {
-    font-size: 20px;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.info-contato h3 {
+    color: #d8aa24;
+
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .info-contato ul {
-    padding-left: 25px;
+    padding-left: 22px;
     margin: 0;
 }
 
 .info-contato li {
-    font-size: 19px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 2.2;
 }
 
-/* FORMULÁRIO */
+
+/* INFORMAÇÕES DE CONTATO */
+
+.dados-contato {
+    border-top: 1px solid #8cb9f8;
+
+    margin-top: 35px;
+    padding-top: 15px;
+}
+
+.dados-contato h3 {
+    margin-top: 0;
+}
+
+.dados-contato p {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.dados-contato strong {
+    color: #d8aa24;
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
 
 .contato {
     background-color: white;
-    color: #222;
+    color: #112849;
 
-    width: 550px;
-    padding: 30px;
-
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-
-    margin-top: 0;
+    padding: 40px;
 }
 
 .contato h1 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin: 0 0 10px;
 }
 
-.contato p {
-    color: #666;
-    margin-bottom: 15px;
+.contato > p {
+    color: #112849;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
 }
+
+
+/* FORMULÁRIO */
 
 .contato form {
     display: flex;
     flex-direction: column;
+
     gap: 8px;
 }
 
 .contato label {
     font-weight: bold;
+    font-size: 14px;
+
+    margin-top: 8px;
 }
 
 .contato input,
 .contato select,
 .contato textarea {
     width: 100%;
+
     padding: 12px;
 
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 5px;
 
     box-sizing: border-box;
-    margin-bottom: 5px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    outline: none;
+    transition: 0.3s;
 }
 
+
+/* DESTAQUE AO CLICAR */
+
+.contato input:focus,
+.contato select:focus,
+.contato textarea:focus {
+    border-color: #d8aa24;
+
+    box-shadow: 0 0 0 2px #d8aa2430;
+}
+
+
+/* CAMPO DE MENSAGEM */
+
 .contato textarea {
-    height: 120px;
+    height: 130px;
+
     resize: vertical;
 }
 
-.contato button {
-    width: fit-content;
 
-    padding: 12px 20px;
+/* BOTÃO */
+
+.contato button {
+    width: 100%;
+
+    padding: 13px;
 
     background-color: #d8aa24;
-    color: #222;
+    color: #112849;
 
     border: none;
     border-radius: 5px;
 
+    font-size: 15px;
+    font-weight: bold;
+
     cursor: pointer;
-    margin-top: 10px;
+
+    margin-top: 18px;
+
+    transition: 0.3s;
 }
 
 .contato button:hover {
     background-color: #c39412;
+
+    transform: translateY(-2px);
 }
 
-/* RESPONSIVIDADE */
 
-@media (max-width: 900px) {
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
     .area-contato {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        padding: 25px 15px;
+    }
+
+    .contato-card {
+        grid-template-columns: 1fr;
     }
 
     .info-contato,
     .contato {
-        width: 100%;
-        max-width: 550px;
-        box-sizing: border-box;
+        padding: 30px;
     }
+
+    .info-contato {
+        border-bottom: 2px solid #d8aa24;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .info-contato,
+    .contato {
+        padding: 25px 20px;
+    }
+
+    .info-contato h1 {
+        font-size: 25px;
+    }
+
+    .contato h1 {
+        font-size: 24px;
+    }
+
 }

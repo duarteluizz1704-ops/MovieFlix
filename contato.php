@@ -1,76 +1,138 @@
-<?php include 'header.php';?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieFlix - Contato</title>
+
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    
+    <?php include 'header.php';?>
+
+
 
     <main class="area-contato">
 
-        <!-- CARD DE INFORMAÇÕES -->
-        <section class="info-contato">
-            <h1>Entre em contato conosco!</h1>
+        <div class="contato-card">
 
-            <p>
-                Nos informe tudo o que poder sobre
-                nosso site!
-            </p>
+            
+            <section class="info-contato">
 
-            <ul>
-                <li>Tire suas Dúvidas</li>
-                <li>Elogie o Site</li>
-                <li>Faça sua Reclamação</li>
-                <li>Nos dê Sugestões</li>
-            </ul>
-        </section>
+                <div class="info-principal">
 
+                    <h1>Entre em contato conosco!</h1>
 
-        <!-- CARD DO FORMULÁRIO -->
-        <section class="contato">
+                    <p>
+                        Sua opinião é muito importante para nós!
+                        Queremos tornar o MovieFlix cada vez melhor
+                        para todos os amantes do cinema.
+                    </p>
 
-            <h1>Entre em contato</h1>
+                    <h3>Como podemos ajudar?</h3>
 
-            <p>
-                Envie sua mensagem para nossa equipe.
-            </p>
-
-            <form>
-
-                <label>Nome</label>
-                <input
-                    type="text"
-                    placeholder="Digite seu nome"
-                >
-
-                <label>Email</label>
-                <input
-                    type="email"
-                    placeholder="Digite seu email"
-                >
-
-                <div class="form-grupo">
-
-                    <label for="assunto">Assunto</label>
-
-                    <select id="assunto">
-                        <option>Dúvida</option>
-                        <option>Elogio</option>
-                        <option>Reclamação</option>
-                        <option>Sugestão</option>
-                    </select>
+                    <ul>
+                        <li>Tire suas dúvidas sobre o site.</li>
+                        <li>Envie elogios e compartilhe sua experiência.</li>
+                        <li>Faça reclamações ou relate problemas.</li>
+                        <li>Compartilhe sugestões e ideias.</li>
+                    </ul>
 
                 </div>
 
-                <label>Mensagem</label>
+                
+                <div class="dados-contato">
 
-                <textarea
-                    placeholder="Digite sua mensagem"
-                ></textarea>
+                    <h3>Fale diretamente conosco</h3>
 
-                <button type="submit">
-                    Enviar mensagem
-                </button>
+                    <p>
+                        <strong>Email:</strong><br>
+                        contato@movieflix.com
+                    </p>
 
-            </form>
+                    <p>
+                        <strong>Telefone:</strong><br>
+                        (81) 99999-9999
+                    </p>
 
-        </section>
+                </div>
+
+            </section>
+
+
+
+            <section class="contato">
+
+                <h1>Envie sua mensagem</h1>
+
+                <p>
+                    Preencha os campos abaixo e nossa equipe
+                    receberá sua mensagem.
+                </p>
+
+                <form>
+
+                    <label for="nome">Nome</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu email"
+                        required
+                    >
+
+                    <div class="form-grupo">
+
+                        <label for="assunto">Assunto</label>
+
+                        <select id="assunto" required>
+                            <option value="duvida">Dúvida</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="sugestao">Sugestão</option>
+                        </select>
+
+                    </div>
+
+                    <label for="mensagem">Mensagem</label>
+
+                    <textarea
+                        id="mensagem"
+                        placeholder="Digite sua mensagem..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
 
     </main>
+
 
 
     <?php include 'footer.php';?>

@@ -21,7 +21,7 @@
 
             <h3>Navegação</h3>
 
-            <a href="index.php">Início</a>
+            <a href="inicio.php">Início</a>
 
             <a href="produto.php">Filmes</a>
 
