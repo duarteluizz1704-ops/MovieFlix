@@ -44,7 +44,7 @@
 
             <h3>Atualização</h3>
 
-            <p>Atualizado em: <span>06/11/2026</span></p>
+            <p>Atualizado em: <span>11/11/2026</span></p>
 
             <p>Versão: <span>3.0</span></p>
 

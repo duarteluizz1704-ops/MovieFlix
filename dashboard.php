@@ -1,139 +1,428 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MovieFlix - Dashboard</title>
 
     <link rel="stylesheet" href="assets/CSS/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
-
 <body>
-    
-    <?php include 'header.php';?>
+
+    <!-- MENU ADMINISTRATIVO -->
+    <header class="menu-admin">
+
+        <a href="inicio.php" class="logo-admin">
+            <span>MOVIE<span>FLIX</span></span>
+            <small>PAINEL ADMINISTRATIVO</small>
+        </a>
+
+        <nav class="menu-admin-direita">
+
+            <a href="inicio.php" class="link-inicio">
+                Início
+            </a>
+
+            <form class="pesquisa-admin" action="dashboard.php" method="GET">
+                <input type="search" name="busca"
+                    placeholder="Pesquisar...">
+                <button type="submit">⌕</button>
+            </form>
+
+            <details class="perfil-menu">
+
+                <summary>
+                    <span class="perfil-avatar">A</span>
+                    <span>Perfil</span>
+                    <span class="seta-perfil">⌄</span>
+                </summary>
+
+                <div class="submenu-admin">
+
+                    <a href="dashboard.php" class="selecionado">
+                        Dashboard
+                    </a>
+
+                    <a href="filmes.php">
+                        Filmes
+                    </a>
+
+                    <a href="alugueis.php">
+                        Aluguéis
+                    </a>
+
+                    <a href="avaliacoes.php">
+                        Avaliações
+                    </a>
+
+                    <a href="perfil.php">
+                        Meu perfil
+                    </a>
+
+                    <hr>
+
+                    <a href="logout.php" class="sair-admin">
+                        Sair / Logout
+                    </a>
+
+                </div>
+
+            </details>
+
+        </nav>
+
+    </header>
 
 
     <main class="dashboard">
 
-        <h1>Dashboard</h1>
+        <!-- TÍTULO -->
+        <section class="dashboard-topo">
 
-        <p>Painel administrativo do MovieFlix.</p>
+            <div>
+                <span class="dashboard-etiqueta">
+                    GERENCIAMENTO DO SISTEMA
+                </span>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Acompanhe os dados e o desempenho da MovieFlix.
+                </p>
+            </div>
+
+            <div class="data-dashboard">
+                <span>Painel administrativo</span>
+                <strong>Visão geral</strong>
+            </div>
+
+        </section>
 
 
+        <!-- INDICADORES -->
         <section class="indicadores">
 
+            <article class="indicador">
 
-            <div class="indicador">
+                <div class="indicador-icone">▣</div>
 
-                <p>Filmes</p>
+                <p>Filmes disponíveis</p>
 
                 <h2>120</h2>
 
-            </div>
+                <span>Filmes no catálogo</span>
+
+            </article>
 
 
-            <div class="indicador">
+            <article class="indicador">
 
-                <p>Clientes</p>
+                <div class="indicador-icone">▤</div>
+
+                <p>Aluguéis realizados</p>
 
                 <h2>350</h2>
 
-            </div>
+                <span>Total de pedidos</span>
+
+            </article>
 
 
-            <div class="indicador">
+            <article class="indicador">
 
-                <p>Aluguéis</p>
+                <div class="indicador-icone">★</div>
 
-                <h2>85</h2>
+                <p>Avaliações feitas</p>
 
-            </div>
+                <h2>186</h2>
+
+                <span>Opiniões dos clientes</span>
+
+            </article>
 
 
-            <div class="indicador">
+            <article class="indicador indicador-faturamento">
+
+                <div class="indicador-icone">R$</div>
 
                 <p>Faturamento</p>
 
-                <h2>R$ 2.480</h2>
+                <h2>R$ 2.480,00</h2>
+
+                <span>Valor acumulado</span>
+
+            </article>
+
+        </section>
+
+
+        <!-- RANKING DE FILMES -->
+        <section class="dashboard-bloco">
+
+            <div class="bloco-topo">
+
+                <div>
+                    <span class="dashboard-etiqueta">
+                        DESEMPENHO DO CATÁLOGO
+                    </span>
+
+                    <h2>Filmes mais alugados</h2>
+
+                    <p>Ranking dos filmes com maior número de aluguéis.</p>
+                </div>
 
             </div>
 
 
+            <div class="tabela-responsiva">
+
+                <table class="tabela-ranking">
+
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Filme</th>
+                            <th>Total de aluguéis</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td><span class="posicao">01</span></td>
+                            <td>Jurassic Park</td>
+                            <td>85 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">02</span></td>
+                            <td>Homem-Aranha</td>
+                            <td>72 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">03</span></td>
+                            <td>Interestelar</td>
+                            <td>64 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">04</span></td>
+                            <td>Batman: O Cavaleiro das Trevas</td>
+                            <td>53 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">05</span></td>
+                            <td>Superman</td>
+                            <td>42 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">06</span></td>
+                            <td>Vingadores: Guerra Infinita</td>
+                            <td>38 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">07</span></td>
+                            <td>Avatar</td>
+                            <td>31 aluguéis</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">08</span></td>
+                            <td>Titanic</td>
+                            <td>25 aluguéis</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
         </section>
 
 
-        <section class="tabela">
+        <!-- CATEGORIAS -->
+        <section class="dashboard-bloco">
 
-            <h2>Aluguéis recentes</h2>
+            <div class="bloco-topo">
 
+                <div>
+                    <span class="dashboard-etiqueta">
+                        PREFERÊNCIAS DOS CLIENTES
+                    </span>
 
-            <table>
+                    <h2>Categorias mais buscadas</h2>
 
-                <tr>
+                    <p>
+                        Quantidade de filmes cadastrados e aluguéis por gênero.
+                    </p>
+                </div>
 
-                    <th>Cliente</th>
-
-                    <th>Obra</th>
-
-                    <th>Valor</th>
-
-                    <th>Status</th>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>Arthur</td>
-
-                    <td>Jurassic Park</td>
-
-                    <td>R$ 9,90</td>
-
-                    <td>Alugado</td>
-
-                </tr>
+            </div>
 
 
-                <tr>
+            <div class="categorias-dashboard">
 
-                    <td>Vitor</td>
+                <article class="categoria-indicador">
+                    <span>01</span>
+                    <h3>Ação</h3>
+                    <p>Filmes no site: <strong>35</strong></p>
+                    <p>Aluguéis: <strong>120</strong></p>
+                </article>
 
-                    <td>Homem Aranha</td>
+                <article class="categoria-indicador">
+                    <span>02</span>
+                    <h3>Ficção científica</h3>
+                    <p>Filmes no site: <strong>20</strong></p>
+                    <p>Aluguéis: <strong>85</strong></p>
+                </article>
 
-                    <td>R$ 12,90</td>
+                <article class="categoria-indicador">
+                    <span>03</span>
+                    <h3>Comédia</h3>
+                    <p>Filmes no site: <strong>18</strong></p>
+                    <p>Aluguéis: <strong>60</strong></p>
+                </article>
 
-                    <td>Alugado</td>
+                <article class="categoria-indicador">
+                    <span>04</span>
+                    <h3>Terror</h3>
+                    <p>Filmes no site: <strong>15</strong></p>
+                    <p>Aluguéis: <strong>40</strong></p>
+                </article>
 
-                </tr>
+                <article class="categoria-indicador">
+                    <span>05</span>
+                    <h3>Nacional</h3>
+                    <p>Filmes no site: <strong>12</strong></p>
+                    <p>Aluguéis: <strong>25</strong></p>
+                </article>
 
+                <article class="categoria-indicador">
+                    <span>06</span>
+                    <h3>Animação</h3>
+                    <p>Filmes no site: <strong>20</strong></p>
+                    <p>Aluguéis: <strong>20</strong></p>
+                </article>
 
-                <tr>
-
-                    <td>João</td>
-
-                    <td>Superman</td>
-
-                    <td>R$ 8,90</td>
-
-                    <td>Pendente</td>
-
-                </tr>
-
-            </table>
+            </div>
 
         </section>
 
+
+        <!-- TABELA DE PEDIDOS -->
+        <section class="dashboard-bloco bloco-pedidos">
+
+            <div class="bloco-topo">
+
+                <div>
+                    <span class="dashboard-etiqueta">
+                        CONTROLE DE TRANSAÇÕES
+                    </span>
+
+                    <h2>Pedidos de aluguéis</h2>
+
+                    <p>
+                        Acompanhe os pedidos e suas respectivas situações.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="tabela-responsiva">
+
+                <table class="tabela-pedidos">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Usuário</th>
+                            <th>Filme</th>
+                            <th>Cupom</th>
+                            <th>Qtd.</th>
+                            <th>Data do aluguel</th>
+                            <th>Expiração</th>
+                            <th>Valor total</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>#001</td>
+                            <td>Luiz Arthur</td>
+                            <td>Jurassic Park</td>
+                            <td>Sim</td>
+                            <td>1</td>
+                            <td>10/11/2026</td>
+                            <td>11/11/2026 22:00</td>
+                            <td>R$ 8,90</td>
+                            <td><span class="status ativo">Ativo</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#002</td>
+                            <td>Vitor Miguel</td>
+                            <td>Superman</td>
+                            <td>Não</td>
+                            <td>1</td>
+                            <td>09/11/2026</td>
+                            <td>10/11/2026 22:00</td>
+                            <td>R$ 8,90</td>
+                            <td><span class="status expirado">Expirado</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#003</td>
+                            <td>João Gabriel</td>
+                            <td>Interestelar</td>
+                            <td>Não</td>
+                            <td>2</td>
+                            <td>11/11/2026</td>
+                            <td>12/11/2026 22:00</td>
+                            <td>R$ 21,80</td>
+                            <td><span class="status pendente">Pendente</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#004</td>
+                            <td>Luiz Arthur</td>
+                            <td>Batman</td>
+                            <td>Sim</td>
+                            <td>1</td>
+                            <td>08/11/2026</td>
+                            <td>09/11/2026 22:00</td>
+                            <td>R$ 7,90</td>
+                            <td><span class="status expirado">Expirado</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
 
     </main>
 
+    <?php include 'footer.php'; ?>
 
-    <?php include 'footer.php';?>
+</body>
+</html>
