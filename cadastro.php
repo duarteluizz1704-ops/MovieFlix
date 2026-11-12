@@ -110,6 +110,7 @@
             </form>
 
         </div>
+        <script src="assets/JS/script.js"></script>
 
     </main>
 

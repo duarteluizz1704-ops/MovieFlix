@@ -99,7 +99,7 @@
                     <h3>Jurassic Park</h3>
                     <p class="genero-filme">Aventura</p>
                     <p class="preco-filme">R$ 9,90</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -112,7 +112,7 @@
                     <h3>Homem-Aranha</h3>
                     <p class="genero-filme">Ação</p>
                     <p class="preco-filme">R$ 12,90</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -125,7 +125,7 @@
                     <h3>Superman</h3>
                     <p class="genero-filme">Ação</p>
                     <p class="preco-filme">R$ 8,90</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -138,7 +138,7 @@
                     <h3>Interestelar</h3>
                     <p class="genero-filme">Ficção científica</p>
                     <p class="preco-filme">R$ 10,90</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -149,7 +149,7 @@
                     <h3>Batman: O Cavaleiro das Trevas</h3>
                     <p class="genero-filme">Ação</p>
                     <p class="preco-filme">Consulte no catálogo</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -160,7 +160,7 @@
                     <h3>Vingadores: Guerra Infinita</h3>
                     <p class="genero-filme">Ação</p>
                     <p class="preco-filme">Consulte no catálogo</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -171,7 +171,7 @@
                     <h3>Avatar</h3>
                     <p class="genero-filme">Ficção científica</p>
                     <p class="preco-filme">Consulte no catálogo</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -182,7 +182,7 @@
                     <h3>Titanic</h3>
                     <p class="genero-filme">Romance</p>
                     <p class="preco-filme">Consulte no catálogo</p>
-                    <span class="nota-filme">★ --/10</span>
+                    <span class="nota-filme">☆☆☆☆☆ <span>--/5</span></span>
                 </article>
 
 
@@ -203,7 +203,7 @@
             <div class="secao-topo">
                 <div>
                     <span class="secao-etiqueta">★ OPINIÃO DOS CLIENTES</span>
-                    <h2>Mais avaliados</h2>
+                    <h2>Nossas Avaliações</h2>
                     <p>Veja o que nossa comunidade está dizendo.</p>
                 </div>
 
@@ -223,18 +223,18 @@
 
                         <div>
                             <h3>Avaliações dos usuários</h3>
-                            <span>Filmes avaliados pela comunidade</span>
+                            <span>Projeto avaliado pela comunidade</span>
                         </div>
                     </div>
 
                     <div class="estrelas">★★★★★</div>
 
                     <p>
-                        As avaliações dos filmes aparecerão aqui.
+                        As avaliações aparecerão aqui.
                     </p>
 
                     <div class="avaliacao-data">
-                        Consulte as avaliações no catálogo.
+                        Nos avaliem para a melhora do site.
                     </div>
 
                 </article>
@@ -262,37 +262,72 @@
             </div>
 
 
-            <div class="categorias-lista">
+        <div class="categorias-lista">
 
-                <a href="produto.php" class="categoria-card categoria-acao">
-                    <span>01</span>
-                    <h3>Ação</h3>
-                    <p>Adrenalina, Tiro, Porrada e Bomba.</p>
-                    <strong>Ver filmes →</strong>
-                </a>
+            <!-- AÇÃO -->
+            <a href="produto.php" class="categoria-card categoria-acao">
 
-                <a href="produto.php" class="categoria-card categoria-ficcao">
-                    <span>02</span>
-                    <h3>Ficção científica</h3>
-                    <p>Explore mundos e possibilidades.</p>
-                    <strong>Ver filmes →</strong>
-                </a>
+                <img src="assets/IMG/icon_acao.png"
+                    alt="Ícone de ação"
+                    class="categoria-icone">
 
-                <a href="produto.php" class="categoria-card categoria-comedia">
-                    <span>03</span>
-                    <h3>Comédia</h3>
-                    <p>Histórias para dar boas risadas.</p>
-                    <strong>Ver filmes →</strong>
-                </a>
+                <h3>Ação</h3>
 
-                <a href="produto.php" class="categoria-card categoria-terror">
-                    <span>04</span>
-                    <h3>Terror</h3>
-                    <p>Terror e Medo para quem aguenta.</p>
-                    <strong>Ver filmes →</strong>
-                </a>
+                <p>Adrenalina, Tiro, Porrada e Bomba.</p>
 
-            </div>
+                <strong>Ver filmes →</strong>
+
+            </a>
+
+
+            <!-- FICÇÃO CIENTÍFICA -->
+            <a href="produto.php" class="categoria-card categoria-ficcao">
+
+                <img src="assets/IMG/icon_ficcao.png"
+                    alt="Ícone de ficção científica"
+                    class="categoria-icone">
+
+                <h3>Ficção científica</h3>
+
+                <p>Explore mundos e possibilidades.</p>
+
+                <strong>Ver filmes →</strong>
+
+            </a>
+
+
+            <!-- COMÉDIA -->
+            <a href="produto.php" class="categoria-card categoria-comedia">
+
+                <img src="assets/IMG/icon_comedia.png"
+                    alt="Ícone de comédia"
+                    class="categoria-icone">
+
+                <h3>Comédia</h3>
+
+                <p>Histórias para dar boas risadas.</p>
+
+                <strong>Ver filmes →</strong>
+
+            </a>
+
+
+            <!-- TERROR -->
+            <a href="produto.php" class="categoria-card categoria-terror">
+
+                <img src="assets/IMG/icon_terror.png"
+                    alt="Ícone de terror"
+                    class="categoria-icone">
+
+                <h3>Terror</h3>
+
+                <p>Terror e medo para quem aguenta.</p>
+
+                <strong>Ver filmes →</strong>
+
+            </a>
+
+        </div>
 
             <div class="secao-final">
                 <a href="produto.php" class="botao-ver-mais">

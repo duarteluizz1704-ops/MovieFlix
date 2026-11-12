@@ -19,8 +19,22 @@
 
 
 <body>
-    
-    <?php include 'header.php';?>
+
+    <header>
+        <div class="logo">
+
+            <img src="assets/IMG/logo1.png" alt="">
+
+            <div class="movieflix">
+
+                <h2><span class="movie">Movie</span><span class="flix">Flix</span></h2>
+
+                <p>Alugue.Assista.Avalie</p>
+
+            </div>
+
+        </div>
+    </header>
 
 
     <main class="login-area">
@@ -33,13 +47,14 @@
             <p class="legenda-login">Entre na sua conta.</p>
 
             
-            <form id="formLogin">
+            <form id="formLogin" method="POST">
 
                 <label for="email">Email</label>
 
                 <input
                     type="email"
                     id="email"
+                    required 
                     placeholder="Digite seu email"
                 >
 
@@ -50,7 +65,8 @@
                     <input
                         type="password"
                         id="senha"
-                        placeholder="Digite sua senha"
+                        required 
+                        placeholder="********"
                     >
 
                     <button type="button" id="mostrarSenha">

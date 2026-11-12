@@ -197,50 +197,62 @@
 
                         <tr>
                             <td><span class="posicao">01</span></td>
-                            <td>Jurassic Park</td>
-                            <td>85 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">02</span></td>
-                            <td>Homem-Aranha</td>
-                            <td>72 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">03</span></td>
-                            <td>Interestelar</td>
-                            <td>64 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">04</span></td>
-                            <td>Batman: O Cavaleiro das Trevas</td>
-                            <td>53 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">05</span></td>
-                            <td>Superman</td>
-                            <td>42 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">06</span></td>
-                            <td>Vingadores: Guerra Infinita</td>
-                            <td>38 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">07</span></td>
-                            <td>Avatar</td>
-                            <td>31 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                         <tr>
                             <td><span class="posicao">08</span></td>
-                            <td>Titanic</td>
-                            <td>25 aluguéis</td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">09</span></td>
+                            <td>XXX</td>
+                            <td>XXX</td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="posicao">10</span></td>
+                            <td>XXX</td>
+                            <td>XXX</td>
                         </tr>
 
                     </tbody>
@@ -276,44 +288,44 @@
 
                 <article class="categoria-indicador">
                     <span>01</span>
-                    <h3>Ação</h3>
-                    <p>Filmes no site: <strong>35</strong></p>
-                    <p>Aluguéis: <strong>120</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
                 <article class="categoria-indicador">
                     <span>02</span>
-                    <h3>Ficção científica</h3>
-                    <p>Filmes no site: <strong>20</strong></p>
-                    <p>Aluguéis: <strong>85</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
                 <article class="categoria-indicador">
                     <span>03</span>
-                    <h3>Comédia</h3>
-                    <p>Filmes no site: <strong>18</strong></p>
-                    <p>Aluguéis: <strong>60</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
                 <article class="categoria-indicador">
                     <span>04</span>
-                    <h3>Terror</h3>
-                    <p>Filmes no site: <strong>15</strong></p>
-                    <p>Aluguéis: <strong>40</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
                 <article class="categoria-indicador">
                     <span>05</span>
-                    <h3>Nacional</h3>
-                    <p>Filmes no site: <strong>12</strong></p>
-                    <p>Aluguéis: <strong>25</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
                 <article class="categoria-indicador">
                     <span>06</span>
-                    <h3>Animação</h3>
-                    <p>Filmes no site: <strong>20</strong></p>
-                    <p>Aluguéis: <strong>20</strong></p>
+                    <h3>XXX</h3>
+                    <p>Filmes no site: <strong>XXX</strong></p>
+                    <p>Aluguéis: <strong>XXX</strong></p>
                 </article>
 
             </div>
