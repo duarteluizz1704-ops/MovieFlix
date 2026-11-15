@@ -1,3 +1,95 @@
+<?php
+
+require_once "includes/config.php";
+
+if (isset($_SESSION["id_usuario"])) {
+
+    if ($_SESSION["tipo_usuario"] === "admin") {
+
+        header("Location: dashboard.php");
+
+    } else {
+
+        header("Location: inicio.php");
+
+    }
+
+    exit;
+}
+
+$erro = "";
+
+// Verifica se o formulário foi enviado
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $email = trim($_POST["email"] ?? "");
+    $senhaDigitada = $_POST["senha"] ?? "";
+
+    if ($email === "" || $senhaDigitada === "") {
+
+        $erro = "Preencha todos os campos.";
+
+    } else {
+
+        // Procura o usuário pelo e-mail
+
+        $sql = "SELECT id_usuario, nome, email, senha, ativo, tipo_usuario
+                FROM usuario
+                WHERE email = :email
+                LIMIT 1";
+
+        $consulta = $pdo->prepare($sql);
+
+        $consulta->bindValue(":email", $email);
+
+        $consulta->execute();
+
+        $usuarioEncontrado = $consulta->fetch(PDO::FETCH_ASSOC);
+
+        // Verifica se o usuário existe e se a senha está correta
+
+        if (
+            $usuarioEncontrado &&
+            (int) $usuarioEncontrado["ativo"] === 1 &&
+            password_verify($senhaDigitada, $usuarioEncontrado["senha"])
+        ) {
+
+            // Cria um novo identificador de sessão
+
+            session_regenerate_id(true);
+
+            // Guarda os dados necessários na sessão
+
+            $_SESSION["id_usuario"] = $usuarioEncontrado["id_usuario"];
+            $_SESSION["nome"] = $usuarioEncontrado["nome"];
+            $_SESSION["email"] = $usuarioEncontrado["email"];
+            $_SESSION["tipo_usuario"] = $usuarioEncontrado["tipo_usuario"];
+
+            // Redireciona usuário pelo tipo de usuário
+
+            if ($_SESSION["tipo_usuario"] === "admin") {
+
+                header("Location: dashboard.php");
+
+            } else {
+
+                header("Location: inicio.php");
+
+            }
+
+            exit;
+
+        } else {
+
+            $erro = "E-mail ou senha incorretos.";
+
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +103,7 @@
 
     <link rel="stylesheet" href="assets/CSS/style.css">
 
-    <script src="assets/JS/formularios.js" defer></script>
+    <script src="assets/JS/script.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -47,13 +139,20 @@
             <p class="legenda-login">Entre na sua conta.</p>
 
             
-            <form id="formLogin" method="POST">
+            <form id="formLogin" method="POST" action="login.php">
+
+                <?php if ($erro !== ""): ?>
+                    <p class="mensagem-erro">
+                        <?= htmlspecialchars($erro) ?>
+                    </p>
+                <?php endif; ?>
 
                 <label for="email">Email</label>
 
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     required 
                     placeholder="Digite seu email"
                 >
@@ -65,6 +164,7 @@
                     <input
                         type="password"
                         id="senha"
+                        name="senha"
                         required 
                         placeholder="********"
                     >

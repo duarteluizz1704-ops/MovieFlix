@@ -4,6 +4,7 @@
 CREATE DATABASE IF NOT EXISTS movieflix
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_bin;
+  USE movieflix;
 
 -- TABELA: USUARIO
 
@@ -13,9 +14,9 @@ CREATE TABLE usuario (
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     telefone_cliente VARCHAR(20) NOT NULL,
-    data_nascimento DATE,
-    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
-    ativo BOOLEAN DEFAULT TRUE
+    data_nascimento DATE NOT NULL,
+    data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ativo NOT NULL BOOLEAN DEFAULT TRUE
 );
 
 

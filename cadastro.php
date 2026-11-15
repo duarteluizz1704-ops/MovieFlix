@@ -1,3 +1,126 @@
+<?php
+
+require_once "includes/config.php";
+
+// Variáveis para armazenar os dados do formulário
+
+$nome = "";
+$email = "";
+$telefone = "";
+$dataNascimento = "";
+$erro = "";
+
+// Verifica se o formulário foi enviado
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    // Recebe os dados do formulário
+
+    $nome = trim($_POST["nome"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $telefone = trim($_POST["telefone_cliente"] ?? "");
+    $dataNascimento = $_POST["data_nascimento"] ?? "";
+
+    $senha = $_POST["senha"] ?? "";
+    $confirmarSenha = $_POST["confirmar_senha"] ?? "";
+
+    // Verifica se todos os campos foram preenchidos
+
+    if (
+        $nome === "" ||
+        $email === "" ||
+        $telefone === "" ||
+        $dataNascimento === "" ||
+        $senha === "" ||
+        $confirmarSenha === ""
+    ) {
+
+        $erro = "Preencha todos os campos.";
+
+    // Verifica se o e-mail é válido
+
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+        $erro = "Digite um e-mail válido.";
+
+    // Verifica se as senhas são iguais
+
+    } elseif ($senha !== $confirmarSenha) {
+
+        $erro = "As senhas não são iguais.";
+
+    // Verifica o tamanho mínimo da senha
+
+    } elseif (strlen($senha) < 8) {
+
+        $erro = "A senha deve ter pelo menos 8 caracteres.";
+
+    } else {
+
+        try {
+
+            // Verifica se o e-mail já está cadastrado
+
+            $sql = "SELECT id_usuario
+                    FROM usuario
+                    WHERE email = :email
+                    LIMIT 1";
+
+            $consulta = $pdo->prepare($sql);
+
+            $consulta->execute([
+                ":email" => $email
+            ]);
+
+            $usuarioExistente = $consulta->fetch(PDO::FETCH_ASSOC);
+
+            if ($usuarioExistente) {
+
+                $erro = "Este e-mail já está cadastrado.";
+
+            } else {
+
+                // Gera o hash da senha
+
+                $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+                // Insere os dados na tabela usuario
+
+                $sql = "INSERT INTO usuario
+                        (nome, email, telefone_cliente, data_nascimento, senha)
+                        VALUES
+                        (:nome, :email, :telefone, :data_nascimento, :senha)";
+
+                $consulta = $pdo->prepare($sql);
+
+                $consulta->execute([
+                    ":nome" => $nome,
+                    ":email" => $email,
+                    ":telefone" => $telefone,
+                    ":data_nascimento" => $dataNascimento,
+                    ":senha" => $senhaHash
+                ]);
+
+                // Cadastro realizado
+
+                header("Location: login.php");
+                exit;
+
+            }
+
+        } catch (PDOException $e) {
+
+            $erro = "Não foi possível realizar o cadastro. Tente novamente.";
+
+        }
+
+    }
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,6 +133,8 @@
     <title>MovieFlix - Cadastro</title>
 
     <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <script src="assets/JS/script.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -28,7 +153,14 @@
             <h1>Cadastre-se</h1>
             <p class="legenda-cadastro">Crie sua conta no MovieFlix.</p>
 
-            <form id="formCadastro" method="POST">
+            <form id="formCadastro" method="POST" action="cadastro.php">
+
+                <?php if ($erro !== ""): ?>
+                    <p class="mensagem-erro">
+                        <?= htmlspecialchars($erro) ?>
+                    </p>
+                
+                <?php endif; ?>
 
                 <div class="campo">
                     <label for="nome">Nome</label>
