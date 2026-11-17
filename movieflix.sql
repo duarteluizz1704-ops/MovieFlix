@@ -16,7 +16,8 @@ CREATE TABLE usuario (
     telefone_cliente VARCHAR(20) NOT NULL,
     data_nascimento DATE NOT NULL,
     data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    ativo NOT NULL BOOLEAN DEFAULT TRUE
+    ativo NOT NULL BOOLEAN DEFAULT TRUE,
+    tipo_usuario ENUM('cliente', 'admin') NOT NULL
 );
 
 
