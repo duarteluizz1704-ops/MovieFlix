@@ -15,7 +15,7 @@ O Diagrama Entidade-Relacionamento (DER) apresenta as tabelas do banco de dados,
 ## Como ler o DER
 
 - PK (Primary Key): chave primária, identifica cada registro de forma única.
-- **FK (Foreign Key): chave estrangeira, estabelece uma ligação entre tabelas.
+- FK (Foreign Key): chave estrangeira, estabelece uma ligação entre tabelas.
 - UK (Unique Key): campo que não permite valores repetidos.
 - 1:N: relacionamento em que um registro de uma tabela pode estar associado a vários registros de outra tabela.
 
