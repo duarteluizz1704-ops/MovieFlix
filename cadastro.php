@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * cadastro.php
+ *
+ * Tela e processamento do cadastro de novos usuários.
+ * Recebe nome, e-mail, telefone, data de nascimento e senha por POST.
+ * Valida os campos, verifica se o e-mail já está cadastrado
+ * e utiliza password_hash() para criptografar a senha.
+ * Após o cadastro, redireciona o usuário para login.php.
+ */
+
+
 require_once "includes/config.php";
 
 // Variáveis para armazenar os dados do formulário

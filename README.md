@@ -10,6 +10,7 @@ Sistema Web de locadora de filmes. O cliente faz o aluguel da produção desejad
 - Sistema de avaliações das obras
 - Envio de críticas, elogios ou dúvidas
 - Painel de perfil para registro de suas atividades no sistema
+- Painel administrativo
 
 ## Tecnologias
 

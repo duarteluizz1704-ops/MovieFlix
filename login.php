@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * login.php
+ *
+ * Tela e processamento do login de usuários.
+ * Recebe e-mail e senha por POST, verifica se os dados estão corretos
+ * e consulta o usuário no banco de dados.
+ * Utiliza password_verify() para conferir a senha criptografada.
+ * Após a autenticação, inicia a sessão e direciona o usuário conforme seu tipo de conta.
+ */
+
+
 require_once "includes/config.php";
 
 if (isset($_SESSION["id_usuario"])) {

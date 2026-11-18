@@ -1,5 +1,14 @@
 <?php 
 
+/**
+ * config.php
+ *
+ * Configura a sessão e a conexão com o banco de dados MovieFlix.
+ * Utiliza PDO para permitir que as páginas do sistema acessem o MySQL.
+ * A conexão é armazenada na variável $pdo para ser utilizada em outros arquivos.
+ */
+
+
 // Iniciar a sessão
 
 if (session_status() === PHP_SESSION_NONE){

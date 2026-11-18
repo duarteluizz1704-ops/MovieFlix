@@ -303,7 +303,6 @@
                             <th>Usuário</th>
                             <th>Filme</th>
                             <th>Cupom</th>
-                            <th>Qtd.</th>
                             <th>Data do aluguel</th>
                             <th>Expiração</th>
                             <th>Valor total</th>
@@ -317,7 +316,6 @@
 
                         <tr>
                             <td>#001</td>
-                            <td>XXX</td>
                             <td>XXX</td>
                             <td>XXX</td>
                             <td>XXX</td>
